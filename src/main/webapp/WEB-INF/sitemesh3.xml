@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <!-- ==================== -->
+    <!--        装饰          -->
+    <!-- ==================== -->
+    <mapping path="/admin/*"     decorator="/index.jsp"/>
+    <mapping path="/role/*"     decorator="/index.jsp"/>
+    <mapping path="/function/*"     decorator="/index.jsp"/>
+    <mapping path="/merchant/*"     decorator="/view/index.jsp"/>
+
+    <!-- ==================== -->
+    <!--        排除          -->
+    <!-- ==================== -->
+    <!--<mapping path="/role/toConf*" exclue="true"/>-->
+</sitemesh>
