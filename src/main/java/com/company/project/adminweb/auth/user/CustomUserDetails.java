@@ -12,18 +12,12 @@ import java.util.List;
  */
 public class CustomUserDetails implements UserDetails {
 
-    /**
-     * 登录名
-     */
-    private String loginName = null;
-    /**
-     * 登录密码
-     */
-    private String loginPwd = null;
-    /**
-     * 授权
-     */
-    private List<SimpleGrantedAuthority> grantedAuthLt = null;
+    /* 登录名 */
+    private String loginName;
+    /* 登录密码 */
+    private String loginPwd;
+    /* 授权 */
+    private List<SimpleGrantedAuthority> grantedAuthLt;
 
     public CustomUserDetails(String loginName, String loginPwd) {
         this.loginName = loginName;

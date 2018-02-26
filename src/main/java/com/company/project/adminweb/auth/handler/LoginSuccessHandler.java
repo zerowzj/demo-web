@@ -30,7 +30,6 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
 
         LOGGER.info("===>用户[{}]登录成功!", userDetails.getUsername());
 
-
         //执行父逻辑
         super.onAuthenticationSuccess(request, response, authentication);
     }

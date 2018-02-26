@@ -1,12 +1,10 @@
 package com.company.project.adminweb.auth.filter;
 
 import com.company.project.adminweb.common.RequestHolder;
-import com.company.project.common.redis.Redis;
 import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -24,9 +22,6 @@ import java.util.UUID;
 public class WatchDogFilter extends OncePerRequestFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WatchDogFilter.class);
-
-    @Autowired
-    Redis redis;
 
     private static final String REQUEST_ID = "Request-Id";
 
