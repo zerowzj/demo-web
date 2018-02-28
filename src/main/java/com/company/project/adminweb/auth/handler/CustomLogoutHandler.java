@@ -19,7 +19,6 @@ public class CustomLogoutHandler implements LogoutHandler {
 
     @Override
     public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
-
         LOGGER.info("用户退出！");
         //设置未认证
         authentication.setAuthenticated(false);
