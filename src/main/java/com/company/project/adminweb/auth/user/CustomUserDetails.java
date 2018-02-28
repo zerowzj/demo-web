@@ -16,7 +16,7 @@ public class CustomUserDetails implements UserDetails {
     private String loginName;
     /* 登录密码 */
     private String loginPwd;
-    /* 授权 */
+    /* 授权列表 */
     private List<SimpleGrantedAuthority> grantedAuthLt;
 
     public CustomUserDetails(String loginName, String loginPwd) {

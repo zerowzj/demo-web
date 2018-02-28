@@ -18,10 +18,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //用户信息
-
         //用户详情
         CustomUserDetails userDetails = new CustomUserDetails(username, "123123");
-
         //返回
         return userDetails;
     }

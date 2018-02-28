@@ -6,7 +6,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,7 +18,7 @@ public class CustomLoginFilter extends UsernamePasswordAuthenticationFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomLoginFilter.class);
 
-    private static final String CAPTCHA_PARAM_NAME = "authCode";
+    private static final String PARAM_NAME_CAPTCHA = "authCode";
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
@@ -35,22 +34,10 @@ public class CustomLoginFilter extends UsernamePasswordAuthenticationFilter {
         return super.attemptAuthentication(request, response);
     }
 
-    //获取验证码
+    /**
+     * 获取验证码
+     */
     private String obtainCaptcha(HttpServletRequest request) {
-        return request.getParameter(CAPTCHA_PARAM_NAME);
-    }
-
-    //获取
-    private String getCaptchaKey(HttpServletRequest request) {
-        Cookie[] cookies = request.getCookies();
-        String value = null;
-        for (Cookie cookie : cookies) {
-            String cookieName = cookie.getName();
-            if ("captcha_key".equals(cookieName)) {
-                value = cookie.getValue();
-                break;
-            }
-        }
-        return value;
+        return request.getParameter(PARAM_NAME_CAPTCHA);
     }
 }

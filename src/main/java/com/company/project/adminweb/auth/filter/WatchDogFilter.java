@@ -1,6 +1,5 @@
 package com.company.project.adminweb.auth.filter;
 
-import com.company.project.adminweb.common.RequestHolder;
 import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,16 +22,15 @@ public class WatchDogFilter extends OncePerRequestFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WatchDogFilter.class);
 
-    private static final String REQUEST_ID = "Request-Id";
+    private static final String HEADER_NAME_REQUEST_ID = "Request-Id";
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         try {
-            RequestHolder.set(request);
             //
             response.setHeader("X-Frame-Options", "SAMEORIGIN");
             //
-            String requestId = request.getHeader(REQUEST_ID);
+            String requestId = request.getHeader(HEADER_NAME_REQUEST_ID);
             if (Strings.isNullOrEmpty(requestId)) {
                 requestId = String.valueOf(UUID.randomUUID().hashCode() & 0x7fffffff);
             }
@@ -41,7 +39,6 @@ public class WatchDogFilter extends OncePerRequestFilter {
             //
             filterChain.doFilter(request, response);
         } finally {
-            RequestHolder.clear();
             MDC.clear();
         }
     }

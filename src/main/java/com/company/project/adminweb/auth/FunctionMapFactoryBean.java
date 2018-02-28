@@ -1,14 +1,10 @@
 package com.company.project.adminweb.auth;
 
-import com.company.project.dao.popedomfunction.PopedomFunctionDao;
-import com.company.project.dao.popedomfunction.PopedomFunctionEO;
-import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -27,36 +23,19 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionMapFactoryBean.class);
 
-    @Autowired
-    private PopedomFunctionDao popedomFunctionDao = null;
-
     @Override
     public LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> getObject() throws Exception {
-        //获取受保护功能列表
-        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null);
         //生成映射
         LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> funMap = Maps.newLinkedHashMap();
-        AntPathRequestMatcher matcher;
-        List<ConfigAttribute> configAttrLt;
-        for (PopedomFunctionEO pfEO : pfEOLt) {
-            //过滤掉1级
-            Integer pfLevel = pfEO.getPfLevel();
-            if (pfLevel == 1) {
-                continue;
-            }
-            String pfPath = pfEO.getPfPath();
-            if (Strings.isNullOrEmpty(pfPath)) {
-                continue;
-            }
 
-            //匹配器
-            matcher = new AntPathRequestMatcher(pfPath + "*");
-            //配置属性
-            configAttrLt = Lists.newArrayList();
-            configAttrLt.add(new SecurityConfig(pfPath));
+        String path = "/**";
+        //匹配器
+        AntPathRequestMatcher matcher = new AntPathRequestMatcher(path + "*");
+        //配置属性
+        List<ConfigAttribute> configAttrLt = Lists.newArrayList();
+        configAttrLt.add(new SecurityConfig(path));
 
-            funMap.put(matcher, configAttrLt);
-        }
+        funMap.put(matcher, configAttrLt);
 
         return funMap;
     }
