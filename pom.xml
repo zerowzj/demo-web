@@ -246,7 +246,7 @@
 
     <build>
         <filters>
-            <filter>sr/main/filter/${env}.properties</filter>
+            <filter>sr/main/filters/${env}.properties</filter>
         </filters>
         <resources>
             <resource>
