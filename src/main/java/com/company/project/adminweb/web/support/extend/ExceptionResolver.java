@@ -1,6 +1,5 @@
 package com.company.project.adminweb.web.support.extend;
 
-import com.company.exception.entity.BaseException;
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
@@ -33,13 +32,8 @@ public class ExceptionResolver {
 
             return null;
         } else {
-            String hint;
-            if (ex instanceof BaseException) {
-                BaseException bex = (BaseException) ex;
-                hint = bex.getMessage();
-            } else {
-                hint = "系统异常，请联系管理员";
-            }
+            String hint = null;
+
             Map<String, Object> model = Maps.newHashMap();
             model.put("hint", hint);
 
