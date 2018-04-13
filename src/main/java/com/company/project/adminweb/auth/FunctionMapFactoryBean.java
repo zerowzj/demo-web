@@ -23,6 +23,8 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionMapFactoryBean.class);
 
+    private static final String PATH = "/**";
+
     @Override
     public LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> getObject() throws Exception {
         //生成映射
@@ -30,7 +32,7 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 
         String path = "/**";
         //匹配器
-        AntPathRequestMatcher matcher = new AntPathRequestMatcher(path + "*");
+        AntPathRequestMatcher matcher = new AntPathRequestMatcher(PATH + "*");
         //配置属性
         List<ConfigAttribute> configAttrLt = Lists.newArrayList();
         configAttrLt.add(new SecurityConfig(path));
