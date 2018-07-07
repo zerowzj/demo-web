@@ -63,5 +63,4 @@ public class SpringContext implements ApplicationContextAware {
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         CONTEXT = applicationContext;
     }
-
 }
