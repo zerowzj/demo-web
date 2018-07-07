@@ -1,6 +1,6 @@
-package com.company.project.adminweb.web.support.action;
+package com.company.project.adminweb.support.action;
 
-import com.company.project.adminweb.web.support.extend.SpringContext;
+import com.company.project.adminweb.support.extend.SpringContext;
 import com.google.common.collect.Maps;
 import org.springframework.web.servlet.ModelAndView;
 

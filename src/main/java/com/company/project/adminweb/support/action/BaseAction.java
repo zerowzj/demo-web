@@ -1,6 +1,6 @@
-package com.company.project.adminweb.web.support.action;
+package com.company.project.adminweb.support.action;
 
-import com.company.project.adminweb.web.support.context.RequestContext;
+import com.company.project.adminweb.support.context.RequestContext;
 import com.google.common.collect.Maps;
 
 import javax.servlet.http.HttpServletRequest;

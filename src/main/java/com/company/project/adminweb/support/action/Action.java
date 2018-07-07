@@ -1,4 +1,4 @@
-package com.company.project.adminweb.web.support.action;
+package com.company.project.adminweb.support.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

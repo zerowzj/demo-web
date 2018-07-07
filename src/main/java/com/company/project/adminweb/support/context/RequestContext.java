@@ -1,4 +1,4 @@
-package com.company.project.adminweb.web.support.context;
+package com.company.project.adminweb.support.context;
 
 import com.google.common.reflect.TypeToken;
 

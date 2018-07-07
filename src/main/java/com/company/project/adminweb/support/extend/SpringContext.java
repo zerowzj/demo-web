@@ -1,4 +1,4 @@
-package com.company.project.adminweb.web.support.extend;
+package com.company.project.adminweb.support.extend;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
