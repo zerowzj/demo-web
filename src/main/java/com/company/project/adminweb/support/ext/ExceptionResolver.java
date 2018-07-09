@@ -1,4 +1,4 @@
-package com.company.project.adminweb.support.extend;
+package com.company.project.adminweb.support.ext;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
