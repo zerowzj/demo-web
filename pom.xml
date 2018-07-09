@@ -245,7 +245,7 @@
     </dependencies>
 
     <build>
-        <finalName>study-web</finalName>
+        <finalName>demo-web</finalName>
         <filters>
             <filter>src/main/filters/${env}.properties</filter>
         </filters>
