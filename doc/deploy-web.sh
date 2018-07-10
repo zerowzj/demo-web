@@ -19,6 +19,9 @@ unzip -oq $WAR_FILE -d $ROOT;
 sleep 3;
 rm -rf $WAR_FILE
 
+export JAVA_HOME=/usr/jdk1.8.0_162
+export PATH=$PATH:$JAVA_HOME/bin
+
 pid=`ps -ef |grep $DEPLOY_HOME/ |grep -v grep |grep -v deploy-web.sh |awk '{print $2}'`
 if [ -n "$pid" ]; then
     kill -9 $pid
@@ -27,5 +30,4 @@ if [ -n "$pid" ]; then
     echo "------------------------------"
 fi
 
-cd $DEPLOY_HOME/bin
-sh startup.sh
+sh ./startup.sh
