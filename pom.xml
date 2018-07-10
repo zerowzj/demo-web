@@ -300,6 +300,13 @@
                 </executions>
             </plugin>-->
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>3.0.0</version>
+            </extension>
+        </extensions>
     </build>
 
     <profiles>
@@ -338,7 +345,7 @@
                                     <commands>
                                         <command>
                                             <![CDATA[
-                                                sh /app/demo-web/bin/deploy-web.sh
+                                                sh /app/demo-web/bin/deploy-web.sh ${war}
                                             ]]>
                                         </command>
                                     </commands>
@@ -348,6 +355,7 @@
                         </executions>
                     </plugin>
                 </plugins>
+
             </build>
         </profile>
         <profile>
