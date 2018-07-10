@@ -12,6 +12,7 @@
         <spring.version>4.2.3.RELEASE</spring.version>
         <spring.security.version>4.2.2.RELEASE</spring.security.version>
         <jackson.version>2.2.0</jackson.version>
+        <war>${project.build.finalName}.war</war>
     </properties>
 
     <dependencies>
