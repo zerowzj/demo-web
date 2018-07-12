@@ -20,6 +20,15 @@
         <!--</mvc:message-converters>-->
     </mvc:annotation-driven>
     <!-- ==================== -->
+    <!--        拦截器        -->
+    <!-- ==================== -->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path=""/>-->
+            <!--<bean class="" />-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+    <!-- ==================== -->
     <!--       静态资源        -->
     <!-- ==================== -->
     <mvc:resources mapping="/static/**" location="/static/"/>
