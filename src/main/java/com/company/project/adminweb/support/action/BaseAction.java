@@ -18,11 +18,9 @@ public abstract class BaseAction implements Action {
     public final Map<String, Object> doAction(HttpServletRequest request, HttpServletResponse response) {
         Map<String, Object> data;
         try {
-            RequestContext cxt = new RequestContext(request, response);
-
-            checkData(cxt);
-
-            data = processBusiness(cxt);
+            RequestContext ctx = new RequestContext(request, response);
+            checkData(ctx);
+            data = processBusiness(ctx);
             if (data == null) {
                 data = Maps.newHashMap();
             }
