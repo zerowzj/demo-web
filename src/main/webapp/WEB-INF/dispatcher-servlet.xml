@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="com.company.project.adminweb.web"
+    <context:component-scan base-package="com.company.project.demoweb.web"
                             use-default-filters="true">
     </context:component-scan>
 
@@ -30,5 +30,5 @@
     <!-- ==================== -->
     <!--        其他          -->
     <!-- ==================== -->
-    <bean class="com.company.project.adminweb.support.ext.SpringContext"/>
+    <bean class="com.company.project.demoweb.support.ext.SpringContext"/>
 </beans>
