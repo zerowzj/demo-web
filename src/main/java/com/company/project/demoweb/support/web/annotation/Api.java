@@ -17,4 +17,5 @@ import java.lang.annotation.Target;
 @Controller
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public @interface Api {
+    String[] value() default {};
 }
