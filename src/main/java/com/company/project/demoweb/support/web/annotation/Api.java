@@ -20,5 +20,4 @@ import java.lang.annotation.Target;
 @ResponseBody
 public @interface Api {
 
-    String key();
 }

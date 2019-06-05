@@ -1,13 +1,12 @@
-package com.company.project.demoweb.web.action.demo2;
+package com.company.project.demoweb.web.action.demo;
 
-import com.company.project.demoweb.support.web.annotation.Action;
 import com.company.project.demoweb.support.web.annotation.Api;
 import com.company.project.demoweb.support.web.annotation.PostMapping;
 
 import java.util.Map;
 
 @Api
-public class Demo1Controller {
+public class DemoController {
 
     @PostMapping("/demo1")
     public Map<String, Object> demo() {
