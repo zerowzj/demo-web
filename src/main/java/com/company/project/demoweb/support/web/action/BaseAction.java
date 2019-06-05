@@ -31,14 +31,12 @@ public abstract class BaseAction implements Action {
     }
 
     /**
-     *
-     *
+     * 验证数据
      */
     public abstract void checkData(RequestContext cxt);
 
     /**
-     *
-     *
+     * 处理业务
      */
     public abstract Map<String, Object> processBusiness(RequestContext cxt);
 }
