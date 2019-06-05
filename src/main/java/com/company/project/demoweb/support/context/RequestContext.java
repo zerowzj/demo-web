@@ -13,8 +13,9 @@ import java.lang.reflect.Type;
  */
 public class RequestContext {
 
+    /* */
     private HttpServletRequest request;
-
+    /* */
     private HttpServletResponse response;
 
     public RequestContext(HttpServletRequest request, HttpServletResponse response) {
