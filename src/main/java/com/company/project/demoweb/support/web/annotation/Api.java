@@ -1,5 +1,6 @@
 package com.company.project.demoweb.support.web.annotation;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +16,7 @@ import java.lang.annotation.Target;
 @Documented
 
 @Controller
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @ResponseBody
 public @interface Api {
 
