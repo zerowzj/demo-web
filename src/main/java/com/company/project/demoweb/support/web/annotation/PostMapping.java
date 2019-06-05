@@ -18,5 +18,5 @@ import java.lang.annotation.Target;
 public @interface PostMapping {
 
     @AliasFor(annotation = RequestMapping.class, attribute = "value")
-    String[] value() ;
+    String[] value();
 }
