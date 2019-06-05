@@ -30,5 +30,5 @@
     <!-- ==================== -->
     <!--        其他          -->
     <!-- ==================== -->
-    <bean class="com.company.project.demoweb.support.ext.SpringContext"/>
+    <bean class="com.company.project.demoweb.support.context.SpringContext"/>
 </beans>

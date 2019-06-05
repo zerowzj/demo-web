@@ -1,6 +1,6 @@
 package com.company.project.demoweb.support.web.action;
 
-import com.company.project.demoweb.support.ext.SpringContext;
+import com.company.project.demoweb.support.context.SpringContext;
 import com.google.common.collect.Maps;
 import org.springframework.web.servlet.ModelAndView;
 

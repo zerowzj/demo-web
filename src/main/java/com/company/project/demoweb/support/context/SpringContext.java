@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.ext;
+package com.company.project.demoweb.support.context;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
