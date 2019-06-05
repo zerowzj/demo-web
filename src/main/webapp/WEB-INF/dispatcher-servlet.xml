@@ -6,29 +6,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
-    <context:component-scan base-package="com.company.project"
+    <context:component-scan base-package="com.company.project.demoweb"
                             use-default-filters="true">
     </context:component-scan>
 
-    <mvc:annotation-driven >
+    <mvc:annotation-driven>
         <!--<mvc:message-converters>-->
-            <!--<bean class="" />-->
+        <!--<bean class="" />-->
         <!--</mvc:message-converters>-->
     </mvc:annotation-driven>
-    <!-- ==================== -->
-    <!--        拦截器         -->
-    <!-- ==================== -->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path=""/>-->
-            <!--<bean class="" />-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
 
-    <mvc:resources mapping="/static/**" location="/static/"/>
-    <!-- ==================== -->
-    <!--        其他          -->
-    <!-- ==================== -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/ABC"/>
+            <bean class="com.company.project.demoweb.support.web.interceptor.LoginedInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <bean class="com.company.project.demoweb.support.context.SpringContext"/>
 </beans>

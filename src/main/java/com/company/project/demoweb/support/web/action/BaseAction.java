@@ -24,6 +24,10 @@ public abstract class BaseAction implements Action {
             if (data == null) {
                 data = Maps.newHashMap();
             }
+            Map<String, Object> result  = Maps.newHashMap();
+            result.put("", "");
+            result.put("", "");
+            result.put("", data);
         } catch (Exception ex) {
             throw ex;
         }
