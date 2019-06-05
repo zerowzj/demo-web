@@ -16,8 +16,9 @@ import java.lang.annotation.Target;
 @Documented
 
 @Controller
-@RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api" + model(), produces = MediaType.APPLICATION_JSON_VALUE)
 @ResponseBody
 public @interface Api {
 
+    String model();
 }
