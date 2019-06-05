@@ -7,12 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
 
-@Controller
+@Api
 public class DemoController {
 
-    @RequestMapping("/demo")
+    @Action("/demo")
     public Map<String, Object> demo() {
         System.out.println("aaaaaaaaaaaaa");
+
+        return null;
+    }
+
+    @Action("/aaaa")
+    public Map<String, Object> demoaaa() {
+        System.out.println("bbbbbbbbbbb");
 
         return null;
     }
