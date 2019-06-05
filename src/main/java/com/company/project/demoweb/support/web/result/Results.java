@@ -12,11 +12,11 @@ import java.util.Map;
  */
 public class Results {
 
-    public static final String CODE_KEY = "code";
+    private static final String CODE_KEY = "code";
 
-    public static final String DESC_KEY = "desc";
+    private static final String DESC_KEY = "desc";
 
-    public static final String DATA_KEY = "data";
+    private static final String DATA_KEY = "data";
 
     private static final String REQUEST_ID_KEY = "request_id";
 
@@ -26,29 +26,20 @@ public class Results {
 
     /**
      * 成功（0000）
-     *
-     * @param data
-     * @return Map
      */
     public static Map<String, Object> ok(Map<String, Object> data) {
         return build(OK, "成功", data);
     }
 
     /**
-     * 失败（9999）
-     *
-     * @return Map
+     * 错误（9999）
      */
-    public static Map<String, Object> fail() {
-        return fail(ERROR, "系统异常");
+    public static Map<String, Object> error() {
+        return build(ERROR, "系统异常", null);
     }
 
     /**
      * 失败
-     *
-     * @param code
-     * @param desc
-     * @return Map<String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Object>
      */
     public static Map<String, Object> fail(String code, String desc) {
         return build(code, desc, null);
