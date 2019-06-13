@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.exception;
+package com.company.project.demoweb.support;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
