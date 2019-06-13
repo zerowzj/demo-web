@@ -1,6 +1,6 @@
 package com.company.project.demoweb.support.web.result;
 
-import com.company.project.demoweb.support.TraceKey;
+import com.company.project.demoweb.support.TraceKeys;
 import com.google.common.collect.Maps;
 
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Results {
      * 错误（9999）
      */
     public static Map<String, Object> error() {
-        return build(ERROR, "系统异常", null);
+        return fail(ERROR, "系统异常");
     }
 
     /**
@@ -53,7 +53,7 @@ public class Results {
             data = Maps.newHashMap();
         }
         result.put(DATA_KEY, data);
-        result.put(REQUEST_ID_KEY, TraceKey.get());
+        result.put(REQUEST_ID_KEY, TraceKeys.get());
         return result;
     }
 }

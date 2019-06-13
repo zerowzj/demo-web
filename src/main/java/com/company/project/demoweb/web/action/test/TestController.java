@@ -1,22 +1,19 @@
 package com.company.project.demoweb.web.action.test;
 
 import com.company.project.demoweb.support.web.annotation.Api;
-import com.company.project.demoweb.support.web.annotation.PostMapping;
 
 import java.util.Map;
 
 @Api
 public class TestController {
 
-    @PostMapping("/demo1")
-    public Map<String, Object> demo() {
+    public Map<String, Object> test1() {
         System.out.println("aaaaaaaaaaaaa");
 
         return null;
     }
 
-    @PostMapping("/aaaa")
-    public Map<String, Object> demoaaa() {
+    public Map<String, Object> test2() {
         System.out.println("bbbbbbbbbbb");
 
         return null;

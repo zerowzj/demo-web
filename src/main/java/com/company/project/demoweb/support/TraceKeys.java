@@ -1,15 +1,15 @@
 package com.company.project.demoweb.support;
 
 /**
- * Track Key Holder
+ * Trace Key Holder
  *
  * @author wangzhj
  */
-public abstract class TraceKey {
+public abstract class TraceKeys {
 
     private static ThreadLocal<String> LOCAL = new ThreadLocal();
 
-    private TraceKey() {
+    private TraceKeys() {
     }
 
     public static String get() {

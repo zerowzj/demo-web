@@ -14,10 +14,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-
 @Controller
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @ResponseBody
 public @interface Api {
-
 }

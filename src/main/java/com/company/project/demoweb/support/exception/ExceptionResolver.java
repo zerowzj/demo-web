@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.ext;
+package com.company.project.demoweb.support.exception;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +17,6 @@ import java.util.Map;
  *
  * @author wangzhj
  */
-@EnableWebMvc
 @ControllerAdvice
 public class ExceptionResolver {
 
