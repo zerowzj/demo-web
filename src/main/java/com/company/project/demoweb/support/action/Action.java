@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.web.action;
+package com.company.project.demoweb.support.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

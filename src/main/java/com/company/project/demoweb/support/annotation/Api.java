@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.web.annotation;
+package com.company.project.demoweb.support.annotation;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;

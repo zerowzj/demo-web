@@ -1,7 +1,7 @@
 package com.company.project.demoweb.web;
 
 
-import com.company.project.demoweb.support.web.action.Action;
+import com.company.project.demoweb.support.action.Action;
 import com.company.project.demoweb.support.context.SpringContext;
 
 import javax.servlet.http.HttpServletRequest;

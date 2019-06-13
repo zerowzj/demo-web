@@ -21,7 +21,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/abc"/>
-            <bean class="com.company.project.demoweb.support.web.interceptor.LoginedInterceptor"/>
+            <bean class="com.company.project.demoweb.support.interceptor.LoginedInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

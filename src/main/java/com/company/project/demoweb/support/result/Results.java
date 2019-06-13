@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.web.result;
+package com.company.project.demoweb.support.result;
 
 import com.company.project.demoweb.support.TraceKeys;
 import com.google.common.collect.Maps;

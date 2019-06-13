@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.web.action;
+package com.company.project.demoweb.support.action;
 
 import com.company.project.demoweb.support.context.SpringContext;
 import com.google.common.collect.Maps;

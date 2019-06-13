@@ -1,7 +1,7 @@
-package com.company.project.demoweb.support.web.action;
+package com.company.project.demoweb.support.action;
 
 import com.company.project.demoweb.support.context.RequestContext;
-import com.company.project.demoweb.support.web.result.Results;
+import com.company.project.demoweb.support.result.Results;
 import com.google.common.collect.Maps;
 
 import javax.servlet.http.HttpServletRequest;

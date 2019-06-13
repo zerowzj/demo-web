@@ -1,6 +1,6 @@
 package com.company.project.demoweb.web.action.demo;
 
-import com.company.project.demoweb.support.web.annotation.Api;
+import com.company.project.demoweb.support.annotation.Api;
 
 import java.util.Map;
 

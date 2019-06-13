@@ -1,4 +1,4 @@
-package com.company.project.demoweb.support.web.interceptor;
+package com.company.project.demoweb.support.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
